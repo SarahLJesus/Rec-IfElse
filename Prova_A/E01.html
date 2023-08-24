@@ -2,7 +2,8 @@
 <script>
     //Problema: Calcular desconto na compra de computador
     /*
-    Peça para o vendedor informar o valor do computador que está vendendo e também informar a forma de pagamento que o Cliente procederá para a compra do equipamento.
+    Peça para o vendedor informar o valor do computador que está vendendo e também informar a forma de pagamento que o Cliente procederá
+    para a compra do equipamento.
     Se for via (B)Boleto, o cliente terá 3% (3/100) de desconto.
     Se for via (D)Dinheiro, o cliente terá 5% (5/100) de desconto.
     Se for via (P)PIX, o cliente terá 10% (10/100) de descconto.
@@ -10,11 +11,30 @@
     */
 
     //ENTRADA
-
+    const valorVenda = Number(prompt(`Informe o valor do computador que você está vendendo.`).replace(",", "."));
+    const formaPagamento = (prompt(`Informe a forma de pagamento que o cliente procederá para a compra do equipamento, sendo B-Boleto D-Dinheiro P-PIX.`).toUpperCase());
 
     //PROCESSAMENTO
-
-
+    const valorB = valorVenda * 3/100;
+    const totalB = valorVenda - valorB;
+    const valorD = valorVenda * 5/100;
+    const totalD = valorVenda - valorD;
+    const valorP = valorVenda * 10/100;
+    const totalP = valorVenda - valorP;
+    
+    if (formaPagamento === "B") {
+        alert(`O cliente terá ${totalB.toFixed(2).replace(".", ",")}.`)
+    }
+    else if (formaPagamento === "D") {
+        alert(`O cliente terá ${totalD.toFixed(2).replace(".", ",")}.`)
+    }
+    else if (formaPagamento === "P") {
+        alert(`O cliente terá ${totalP.toFixed(2).replace(".", ",")}.`)
+    }
+    else {
+        alert(`Houve algum erro.`);
+    }
+    
     //SAÍDA
 
 

@@ -2,18 +2,23 @@
 <script>
     //PROBLEMA: Média de Preços
     /*
-    Considere que uma pessoa foi em 3 supermercados para fazer pesquisa do preço da carne. Peça para a pessoa informar o preço da carne em cada um dos supermercados e calcule a média dos preços. Apresente o preço médio da carne na tela.
+    Considere que uma pessoa foi em 3 supermercados para fazer pesquisa do preço da carne.
+    Peça para a pessoa informar o preço da carne em cada um dos supermercados e calcule a média dos preços.
+    Apresente o preço médio da carne na tela.
     */
 
     //ENTRADA
-
-
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
+    const carne1 = Number(prompt(`Informe o valor da carne do supermercado 1.`).replace(",", "."));
+    const carne2 = Number(prompt(`Informe o valor da carne do supermercado 2.`).replace(",", "."));
+    const carne3 = Number(prompt(`Informe o valor da carne do supermercado 3.`).replace(",", "."));
     
+    //PROCESSAMENTO
+    const soma = carne1 + carne2 + carne3;
+    const media = soma / 3;
+   
+    //SAÍDA
+    alert(`O preço médio da carne: R$ ${media.toFixed(2).replace(".", ",")}.`);
+
     /*
     Para testar:
     Preço da carne no supermercado 1: 10.

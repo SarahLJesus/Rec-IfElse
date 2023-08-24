@@ -10,14 +10,19 @@
     */
 
     //ENTRADA
-
+    const dias = Number(prompt(`Informe quantos dias você pretende ficar a bicicleta.`));
 
     //PROCESSAMENTO
-
+    if (dias <= 7) {
+        alert(`O custo diario não sofrerá alterações, você ficará ${dias} dias com a bicicleta e pagará R$ ${dias * 15}.`);
+    }
+    else {
+        alert(`Seu custo diario irá alterar, ficará ${dias} dias com a bicicleta e pagará R${dias * 12}.`);
+    }
 
     //SAÍDA
 
-    
+
     /*
     Para testar:
     Dias com a bicicleta 5. Preço Final: R$ 75,00
